@@ -1,0 +1,28 @@
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80') center/cover;
+    height: 100vh;
+    min-height: 500px;
+}
+
+.bg-dark {
+    background-color: #0f172a !important; /* Grafite escuro / Azul marinho */
+}
+
+.text-primary {
+    color: #3b82f6 !important; /* BluePrincipal */
+}
+
+.btn-primary {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.btn-primary:hover {
+    background-color: #2563eb;
+    border-color: #2563eb;
+}
