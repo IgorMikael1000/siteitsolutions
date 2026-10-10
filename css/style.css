@@ -27,64 +27,30 @@ body {
     border-color: #2563eb;
 }
 
-.site-footer {
-    background: #050b18;
-}
-
-.app-download-card {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    overflow: hidden;
-    padding: 2.5rem;
-    border: 1px solid rgba(148, 163, 184, 0.2);
-    border-radius: 1.5rem;
-    background:
-        radial-gradient(ellipse at 5% 100%, rgba(59, 130, 246, 0.2), transparent 55%),
-        linear-gradient(115deg, #111d33, #0c1425 70%);
-}
-
-.app-download-info {
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.app-icon {
-    display: grid;
-    flex: 0 0 4.5rem;
-    width: 4.5rem;
-    height: 4.5rem;
-    place-items: center;
-    border: 1px solid rgba(147, 197, 253, 0.3);
+.solution-card {
     border-radius: 1.25rem;
-    background: linear-gradient(145deg, #2563eb, #1646a1);
-    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25);
-    color: #fff;
-    font-size: 1.8rem;
+    transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
-.app-store-label {
-    color: #93c5fd;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+.solution-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.12) !important;
 }
 
-.app-download-info p {
-    color: #b8c4d8;
+.solution-app-icon {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1.1rem;
+    object-fit: cover;
+    box-shadow: 0 0.5rem 1.25rem rgba(15, 23, 42, 0.16);
 }
 
 .google-play-button {
     display: inline-flex;
-    flex: 0 0 auto;
     align-items: center;
     gap: 0.9rem;
     padding: 0.8rem 1.1rem;
-    border: 1px solid rgba(255, 255, 255, 0.75);
+    border: 1px solid #d8dee8;
     border-radius: 0.8rem;
     background: #fff;
     color: #101828;
@@ -123,22 +89,79 @@ body {
     font-size: 0.9rem;
 }
 
-.footer-legal p:first-child {
-    color: #cbd5e1;
+.contact-button {
+    display: flex;
+    min-height: 5rem;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgba(148, 163, 184, 0.24);
+    border-radius: 0.9rem;
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+    text-align: left;
+    text-decoration: none;
+    transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.contact-button:hover {
+    transform: translateY(-2px);
+    border-color: rgba(147, 197, 253, 0.65);
+    background: rgba(255, 255, 255, 0.11);
+    color: #fff;
+}
+
+.contact-button > span {
+    display: grid;
+    min-width: 0;
+    gap: 0.2rem;
+}
+
+.contact-button strong {
+    font-size: 0.95rem;
+}
+
+.contact-button small {
+    color: #b8c4d8;
+    font-size: 0.75rem;
+    overflow-wrap: anywhere;
+}
+
+.contact-icon {
+    display: grid;
+    flex: 0 0 2.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    place-items: center;
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    font-size: 1.2rem;
+}
+
+.email-icon {
+    color: #93c5fd;
+}
+
+.whatsapp-icon {
+    color: #4ade80;
+}
+
+.instagram-icon {
+    color: #f472b6;
+}
+
+.facebook-icon {
+    color: #60a5fa;
+}
+
+.contact-arrow {
+    margin-left: auto;
+    color: #94a3b8;
+    font-size: 0.85rem;
 }
 
 @media (max-width: 767.98px) {
-    .app-download-card,
-    .app-download-info {
-        align-items: flex-start;
-        flex-direction: column;
-    }
-
-    .app-download-card {
-        padding: 1.75rem;
-    }
-
-    .app-download-info {
-        gap: 1.25rem;
+    .contact-button {
+        min-height: 4.5rem;
     }
 }
