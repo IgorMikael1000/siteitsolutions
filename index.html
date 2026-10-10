@@ -126,6 +126,25 @@
         </div>
     </footer>
 
+    <aside class="app-promo" aria-label="Conheça o Roterizador PRO">
+        <button class="app-promo-close" type="button" aria-label="Fechar apresentação do Roterizador PRO">
+            <i class="bi bi-x-lg" aria-hidden="true"></i>
+        </button>
+        <a class="app-promo-link" href="https://play.google.com/store/apps/details?id=app.itsolutions.roterizadorpro" target="_blank" rel="noopener noreferrer">
+            <img src="img/icon_roterizadorpro.jpeg" alt="" class="app-promo-icon">
+            <span class="app-promo-copy">
+                <strong>Conheça o Roterizador PRO</strong>
+                <small>Otimize suas rotas e facilite suas entregas.</small>
+                <span class="app-promo-cta"><i class="bi bi-google-play" aria-hidden="true"></i> Ver na Play Store</span>
+            </span>
+        </a>
+    </aside>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelector(".app-promo-close").addEventListener("click", () => {
+            document.querySelector(".app-promo").classList.add("app-promo-hidden");
+        });
+    </script>
 </body>
 </html>
