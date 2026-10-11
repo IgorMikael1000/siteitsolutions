@@ -160,12 +160,18 @@ body {
     font-size: 0.85rem;
 }
 
-.app-promo {
+.app-promos {
     position: fixed;
     right: 1.5rem;
     bottom: 1.5rem;
     z-index: 1050;
+    display: grid;
+    gap: 0.75rem;
     width: min(22rem, calc(100vw - 2rem));
+}
+
+.app-promo {
+    position: relative;
     padding: 1rem;
     border: 1px solid rgba(148, 163, 184, 0.24);
     border-radius: 1rem;
@@ -185,6 +191,10 @@ body {
     border-bottom: 1px solid rgba(148, 163, 184, 0.24);
     background: #fff;
     content: "";
+}
+
+.app-promo:not(:last-child)::after {
+    display: none;
 }
 
 .app-promo-hidden {
@@ -276,6 +286,11 @@ body {
     }
 
     .app-promo {
+        right: auto;
+        bottom: auto;
+    }
+
+    .app-promos {
         right: 1rem;
         bottom: 1rem;
     }
