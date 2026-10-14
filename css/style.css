@@ -154,6 +154,21 @@ body {
     color: #60a5fa;
 }
 
+.youtube-icon {
+    color: #fff;
+    background: #ff0000;
+    box-shadow: 0 0 0 4px rgba(255, 0, 0, 0.14), 0 4px 14px rgba(255, 0, 0, 0.24);
+    font-size: 1.3rem;
+}
+
+.youtube-contact-button {
+    border-color: rgba(255, 0, 0, 0.36);
+}
+
+.youtube-contact-button:hover {
+    border-color: rgba(255, 0, 0, 0.72);
+}
+
 .contact-arrow {
     margin-left: auto;
     color: #94a3b8;
