@@ -4,9 +4,198 @@ body {
 }
 
 .hero-section {
-    background: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1920&q=80') center/cover;
-    height: 100vh;
-    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+    min-height: min(680px, calc(100vh - 56px));
+    padding: 4rem 0;
+    background:
+        radial-gradient(ellipse at 82% 48%, rgba(59, 130, 246, 0.2), transparent 38%),
+        linear-gradient(120deg, #0f172a 0%, #111c35 60%, #172554 100%);
+}
+
+.hero-view[hidden] {
+    display: none;
+}
+
+.hero-section h1 {
+    max-width: 39rem;
+    letter-spacing: -0.035em;
+}
+
+.hero-eyebrow {
+    color: #bfdbfe;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.hero-description {
+    max-width: 35rem;
+    color: #cbd5e1;
+    line-height: 1.65;
+}
+
+.hero-section .btn-outline-light:hover {
+    color: #0f172a;
+}
+
+.hero-showcase {
+    max-width: 48rem;
+    margin-left: auto;
+}
+
+.hero-dashboard {
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 0.75rem;
+    background: #fff;
+    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.22);
+}
+
+.hero-dashboard img {
+    display: block;
+    width: 100%;
+}
+
+.hero-dashboard-caption {
+    margin-top: 0.85rem;
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    text-align: right;
+}
+
+.hero-switch-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #bfdbfe;
+    font-weight: 600;
+    text-align: left;
+    text-decoration: underline;
+    text-decoration-color: rgba(191, 219, 254, 0.45);
+    text-underline-offset: 0.25rem;
+}
+
+.hero-switch-button:hover {
+    color: #fff;
+    text-decoration-color: currentColor;
+}
+
+.hero-switch-button:focus-visible,
+.hero-product-card:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 4px;
+}
+
+.hero-product-card {
+    display: flex;
+    height: 100%;
+    align-items: flex-start;
+    gap: 0.9rem;
+    padding: 1.15rem;
+    border: 1px solid #dbe3ee;
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 0.75rem 1.75rem rgba(0, 0, 0, 0.14);
+    color: #0f172a;
+    text-decoration: none;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.hero-product-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+    color: #0f172a;
+}
+
+.hero-product-card > img {
+    flex: 0 0 3.5rem;
+    border-radius: 0.8rem;
+    object-fit: cover;
+}
+
+.hero-product-card > span {
+    display: grid;
+    gap: 0.45rem;
+}
+
+.hero-product-card strong {
+    font-size: 1rem;
+}
+
+.hero-product-card small {
+    color: #64748b;
+    line-height: 1.45;
+}
+
+.hero-product-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-top: 0.25rem;
+    color: #2563eb;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.hero-apps-note {
+    max-width: 24rem;
+    margin-left: auto;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 1.25rem;
+    background: rgba(255, 255, 255, 0.06);
+    color: #cbd5e1;
+    line-height: 1.65;
+}
+
+.hero-apps-note > .bi {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    color: #93c5fd;
+    font-size: 2.5rem;
+}
+
+.about-eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.about-step {
+    padding: 1.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 0.5rem 1.5rem rgba(15, 23, 42, 0.05);
+}
+
+.about-step-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-step-number {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.about-step-icon {
+    display: grid;
+    width: 3rem;
+    height: 3rem;
+    place-items: center;
+    border-radius: 0.9rem;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 1.25rem;
 }
 
 .bg-dark {
@@ -43,6 +232,51 @@ body {
     border-radius: 1.1rem;
     object-fit: cover;
     box-shadow: 0 0.5rem 1.25rem rgba(15, 23, 42, 0.16);
+}
+
+.platform-preview {
+    overflow: hidden;
+    border: 1px solid #dbe3ee;
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 0.75rem 1.75rem rgba(15, 23, 42, 0.1);
+}
+
+.platform-preview-link {
+    display: block;
+    overflow: hidden;
+}
+
+.platform-preview img {
+    width: 100%;
+    height: auto;
+    transition: transform 180ms ease;
+}
+
+.platform-preview-link:hover img {
+    transform: scale(1.02);
+}
+
+.platform-preview-link:focus-visible {
+    outline: 3px solid #3b82f6;
+    outline-offset: -3px;
+}
+
+.platform-preview-caption {
+    padding: 0.65rem 1rem;
+    color: #64748b;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+.platform-eyebrow {
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+.platforms-cta p {
+    max-width: 48rem;
 }
 
 .google-play-button {
@@ -175,144 +409,45 @@ body {
     font-size: 0.85rem;
 }
 
-.app-promos {
-    position: fixed;
-    right: 1.5rem;
-    bottom: 1.5rem;
-    z-index: 1050;
-    display: grid;
-    gap: 0.75rem;
-    width: min(22rem, calc(100vw - 2rem));
-}
-
-.app-promo {
-    position: relative;
-    padding: 1rem;
-    border: 1px solid rgba(148, 163, 184, 0.24);
-    border-radius: 1rem;
-    background: #fff;
-    box-shadow: 0 1rem 3rem rgba(15, 23, 42, 0.25);
-    animation: app-promo-entrance 350ms ease-out both;
-}
-
-.app-promo::after {
-    position: absolute;
-    right: 1.5rem;
-    bottom: -0.45rem;
-    width: 0.85rem;
-    height: 0.85rem;
-    transform: rotate(45deg);
-    border-right: 1px solid rgba(148, 163, 184, 0.24);
-    border-bottom: 1px solid rgba(148, 163, 184, 0.24);
-    background: #fff;
-    content: "";
-}
-
-.app-promo:not(:last-child)::after {
-    display: none;
-}
-
-.app-promo-hidden {
-    display: none;
-}
-
-.app-promo-close {
-    position: absolute;
-    top: 0.55rem;
-    right: 0.55rem;
-    z-index: 1;
-    display: grid;
-    width: 1.8rem;
-    height: 1.8rem;
-    place-items: center;
-    border: 0;
-    border-radius: 50%;
-    background: #f1f5f9;
-    color: #475569;
-    font-size: 0.7rem;
-}
-
-.app-promo-close:hover {
-    background: #e2e8f0;
-}
-
-.app-promo-link {
-    display: flex;
-    align-items: center;
-    gap: 0.9rem;
-    padding-right: 1rem;
-    color: #0f172a;
-    text-decoration: none;
-}
-
-.app-promo-link:hover {
-    color: #0f172a;
-}
-
-.app-promo-icon {
-    flex: 0 0 3.5rem;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 0.85rem;
-    object-fit: cover;
-}
-
-.app-promo-copy {
-    display: grid;
-    gap: 0.25rem;
-}
-
-.app-promo-copy strong {
-    padding-right: 0.5rem;
-    font-size: 0.95rem;
-}
-
-.app-promo-copy small {
-    color: #64748b;
-    font-size: 0.78rem;
-    line-height: 1.35;
-}
-
-.app-promo-cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    margin-top: 0.25rem;
-    color: #2563eb;
-    font-size: 0.8rem;
-    font-weight: 700;
-}
-
-@keyframes app-promo-entrance {
-    from {
-        transform: translateY(0.75rem);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 @media (max-width: 767.98px) {
+    .hero-section {
+        min-height: auto;
+        padding: 4rem 0 5rem;
+    }
+
+    .hero-section h1 {
+        font-size: clamp(2.5rem, 11vw, 3.5rem);
+    }
+
+    .hero-showcase {
+        margin: 0 auto;
+        padding-left: 0;
+    }
+
+    .hero-dashboard-caption {
+        text-align: left;
+    }
+
+    .hero-apps-note {
+        max-width: none;
+        margin: 0;
+        padding: 1.5rem;
+    }
+
     .contact-button {
         min-height: 4.5rem;
     }
 
-    .app-promo {
-        right: auto;
-        bottom: auto;
+    .platform-example {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
     }
 
-    .app-promos {
-        right: 1rem;
-        bottom: 1rem;
-    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .app-promo {
-        animation: none;
+    .hero-product-card,
+    .platform-preview img {
+        transition: none;
     }
 }
