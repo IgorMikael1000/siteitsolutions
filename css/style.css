@@ -118,6 +118,26 @@ body {
     object-fit: cover;
 }
 
+.solution-app-symbol {
+    display: grid;
+    flex: 0 0 3.5rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    place-items: center;
+    border-radius: 0.9rem;
+    background: #f3e8ff;
+    color: #7e4ca5;
+    font-size: 1.65rem;
+}
+
+.solution-app-symbol {
+    flex: 0 0 5rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 1.1rem;
+    font-size: 2rem;
+}
+
 .hero-product-card > span {
     display: grid;
     gap: 0.45rem;
@@ -318,6 +338,132 @@ body {
     font-size: 1rem;
 }
 
+.vitta-page {
+    color: #30243c;
+    background: #fff;
+}
+
+.vitta-hero,
+.vitta-how-section {
+    background: #faf7fc;
+}
+
+.vitta-eyebrow {
+    color: #8050a7;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.btn-vitta-primary {
+    border-color: #8050a7;
+    background: #8050a7;
+    color: #fff;
+}
+
+.btn-vitta-primary:hover,
+.btn-vitta-primary:focus-visible {
+    border-color: #683b8e;
+    background: #683b8e;
+    color: #fff;
+}
+
+.vitta-screenshot-frame {
+    overflow: hidden;
+    border: 1px solid #eadff0;
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 1rem 2.5rem rgba(63, 39, 78, 0.12);
+}
+
+.vitta-screenshot-frame img {
+    width: 100%;
+    height: auto;
+}
+
+.vitta-screenshot-frame a:focus-visible {
+    outline: 3px solid #8050a7;
+    outline-offset: -3px;
+}
+
+.vitta-feature-card,
+.vitta-step {
+    padding: 1.6rem;
+    border: 1px solid #eadff0;
+    border-radius: 1rem;
+    background: #fff;
+    box-shadow: 0 0.5rem 1.5rem rgba(63, 39, 78, 0.06);
+}
+
+.vitta-feature-icon {
+    display: grid;
+    width: 3.25rem;
+    height: 3.25rem;
+    place-items: center;
+    border-radius: 1rem;
+    background: #f3e8ff;
+    color: #8050a7;
+    font-size: 1.4rem;
+}
+
+.vitta-feature-card ul {
+    padding-left: 1.1rem;
+    line-height: 1.6;
+}
+
+.vitta-feature-card li + li {
+    margin-top: 0.55rem;
+}
+
+.vitta-step-number {
+    color: #9c74b8;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+}
+
+.vitta-cta-section {
+    background: linear-gradient(135deg, #f8f1fb 0%, #efe3f6 100%);
+}
+
+.vitta-cta {
+    max-width: 56rem;
+    padding: clamp(1.5rem, 5vw, 3.5rem);
+    border: 1px solid #eadff0;
+    border-radius: 1.5rem;
+    background: #fff;
+    box-shadow: 0 1rem 2.5rem rgba(63, 39, 78, 0.1);
+}
+
+.vitta-cta .lead {
+    color: #675b70;
+}
+
+.vitta-carousel {
+    padding: 0 3.5rem;
+}
+
+.vitta-carousel-control {
+    width: 3rem;
+    height: 3rem;
+    top: 50%;
+    border: 0;
+    border-radius: 50%;
+    background: #8050a7;
+    opacity: 0.95;
+    transform: translateY(-50%);
+}
+
+.vitta-carousel-control:hover {
+    background: #683b8e;
+}
+
+.vitta-carousel-control:focus-visible {
+    outline: 3px solid #30243c;
+    outline-offset: 3px;
+}
+
 .google-play-button > .bi-arrow-up-right {
     color: #64748b;
     font-size: 0.9rem;
@@ -434,6 +580,15 @@ body {
         padding: 1.5rem;
     }
 
+    .vitta-carousel {
+        padding: 0 2.5rem;
+    }
+
+    .vitta-carousel-control {
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+
     .contact-button {
         min-height: 4.5rem;
     }
@@ -448,6 +603,10 @@ body {
 @media (prefers-reduced-motion: reduce) {
     .hero-product-card,
     .platform-preview img {
+        transition: none;
+    }
+
+    .carousel-item {
         transition: none;
     }
 }
