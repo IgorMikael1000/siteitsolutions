@@ -3,181 +3,93 @@ body {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-.hero-section {
+.launch-hero {
     position: relative;
     overflow: hidden;
-    min-height: min(680px, calc(100vh - 56px));
-    padding: 4rem 0;
+    min-height: min(690px, calc(100vh - 56px));
     background:
-        radial-gradient(ellipse at 82% 48%, rgba(59, 130, 246, 0.2), transparent 38%),
-        linear-gradient(120deg, #0f172a 0%, #111c35 60%, #172554 100%);
+        radial-gradient(ellipse at 82% 48%, rgba(220, 179, 246, 0.2), transparent 38%),
+        linear-gradient(120deg, #24152f 0%, #432957 58%, #724c8b 100%);
 }
 
-.hero-view[hidden] {
-    display: none;
-}
-
-.hero-section h1 {
-    max-width: 39rem;
+.launch-hero h1 {
+    max-width: 40rem;
     letter-spacing: -0.035em;
 }
 
-.hero-eyebrow {
-    color: #bfdbfe;
-    font-size: 0.9rem;
+.launch-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #f0dcff;
+    font-size: 0.82rem;
     font-weight: 700;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.07em;
     text-transform: uppercase;
 }
 
-.hero-description {
-    max-width: 35rem;
-    color: #cbd5e1;
+.launch-description {
+    max-width: 38rem;
+    color: #e4d8eb;
     line-height: 1.65;
 }
 
-.hero-section .btn-outline-light:hover {
-    color: #0f172a;
-}
-
-.hero-showcase {
-    max-width: 48rem;
-    margin-left: auto;
-}
-
-.hero-dashboard {
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    border-radius: 0.75rem;
+.btn-vitta-hero {
+    border-color: #fff;
     background: #fff;
-    box-shadow: 0 1rem 2.5rem rgba(0, 0, 0, 0.22);
+    color: #603b77;
 }
 
-.hero-dashboard img {
+.btn-vitta-hero:hover,
+.btn-vitta-hero:focus-visible {
+    border-color: #f0dcff;
+    background: #f0dcff;
+    color: #4a2d5d;
+}
+
+.btn-vitta-nav {
+    background: #f3e8ff;
+    color: #54356b;
+    font-weight: 700;
+}
+
+.btn-vitta-nav:hover,
+.btn-vitta-nav:focus-visible {
+    background: #fff;
+    color: #432957;
+}
+
+.launch-preview {
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 1.25rem;
+    background: #fff;
+    box-shadow: 0 1.5rem 4rem rgba(17, 7, 25, 0.36);
+}
+
+.launch-preview img {
     display: block;
     width: 100%;
 }
 
-.hero-dashboard-caption {
-    margin-top: 0.85rem;
-    color: #cbd5e1;
+.launch-preview-caption {
+    padding: 0.75rem 1rem;
+    background: rgba(255, 255, 255, 0.96);
+    color: #675b70;
     font-size: 0.85rem;
-    text-align: right;
+    text-align: center;
 }
 
-.hero-switch-button {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.55rem;
-    padding: 0;
-    border: 0;
-    background: transparent;
-    color: #bfdbfe;
-    font-weight: 600;
-    text-align: left;
-    text-decoration: underline;
-    text-decoration-color: rgba(191, 219, 254, 0.45);
-    text-underline-offset: 0.25rem;
+.launch-highlights {
+    color: #eddef5;
+    font-size: 0.88rem;
 }
 
-.hero-switch-button:hover {
-    color: #fff;
-    text-decoration-color: currentColor;
-}
-
-.hero-switch-button:focus-visible,
-.hero-product-card:focus-visible {
-    outline: 3px solid #93c5fd;
-    outline-offset: 4px;
-}
-
-.hero-product-card {
-    display: flex;
-    height: 100%;
-    align-items: flex-start;
-    gap: 0.9rem;
-    padding: 1.15rem;
-    border: 1px solid #dbe3ee;
-    border-radius: 1rem;
-    background: #fff;
-    box-shadow: 0 0.75rem 1.75rem rgba(0, 0, 0, 0.14);
-    color: #0f172a;
-    text-decoration: none;
-    transition: transform 180ms ease, box-shadow 180ms ease;
-}
-
-.hero-product-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-    color: #0f172a;
-}
-
-.hero-product-card > img {
-    flex: 0 0 3.5rem;
-    border-radius: 0.8rem;
-    object-fit: cover;
-}
-
-.solution-app-symbol {
-    display: grid;
-    flex: 0 0 3.5rem;
-    width: 3.5rem;
-    height: 3.5rem;
-    place-items: center;
-    border-radius: 0.9rem;
-    background: #f3e8ff;
-    color: #7e4ca5;
-    font-size: 1.65rem;
-}
-
-.solution-app-symbol {
-    flex: 0 0 5rem;
-    width: 5rem;
-    height: 5rem;
-    border-radius: 1.1rem;
-    font-size: 2rem;
-}
-
-.hero-product-card > span {
-    display: grid;
-    gap: 0.45rem;
-}
-
-.hero-product-card strong {
-    font-size: 1rem;
-}
-
-.hero-product-card small {
-    color: #64748b;
-    line-height: 1.45;
-}
-
-.hero-product-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    margin-top: 0.25rem;
-    color: #2563eb;
-    font-size: 0.85rem;
-    font-weight: 700;
-}
-
-.hero-apps-note {
-    max-width: 24rem;
-    margin-left: auto;
-    padding: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.18);
-    border-radius: 1.25rem;
-    background: rgba(255, 255, 255, 0.06);
-    color: #cbd5e1;
-    line-height: 1.65;
-}
-
-.hero-apps-note > .bi {
-    display: inline-block;
-    margin-bottom: 1.25rem;
-    color: #93c5fd;
-    font-size: 2.5rem;
+.launch-highlights li {
+    white-space: nowrap;
 }
 
 .about-eyebrow {
@@ -244,6 +156,56 @@ body {
 .solution-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.12) !important;
+}
+
+.vitta-featured-product {
+    overflow: hidden;
+    border: 1px solid #eadff0;
+    border-radius: 1.25rem;
+    background: #faf7fc;
+    box-shadow: 0 0.75rem 2rem rgba(63, 39, 78, 0.08);
+}
+
+.vitta-featured-image {
+    display: block;
+    height: 100%;
+    min-height: 20rem;
+    background: #f3e8ff;
+}
+
+.vitta-featured-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 20rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+.vitta-featured-content {
+    padding: clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.vitta-product-label {
+    color: #8050a7;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+}
+
+.solution-app-card {
+    border-radius: 1.1rem;
+}
+
+.solution-app-card .card-body {
+    min-height: 12.5rem;
+}
+
+.solution-app-card .solution-app-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.8rem;
 }
 
 .solution-app-icon {
@@ -556,28 +518,17 @@ body {
 }
 
 @media (max-width: 767.98px) {
-    .hero-section {
+    .launch-hero {
         min-height: auto;
-        padding: 4rem 0 5rem;
     }
 
-    .hero-section h1 {
+    .launch-hero h1 {
         font-size: clamp(2.5rem, 11vw, 3.5rem);
     }
 
-    .hero-showcase {
-        margin: 0 auto;
-        padding-left: 0;
-    }
-
-    .hero-dashboard-caption {
-        text-align: left;
-    }
-
-    .hero-apps-note {
-        max-width: none;
-        margin: 0;
-        padding: 1.5rem;
+    .vitta-featured-image,
+    .vitta-featured-image img {
+        min-height: 0;
     }
 
     .vitta-carousel {
@@ -601,7 +552,6 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .hero-product-card,
     .platform-preview img {
         transition: none;
     }
