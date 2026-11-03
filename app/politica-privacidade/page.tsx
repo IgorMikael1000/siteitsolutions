@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Política de Privacidade — I&T Solutions",
   description: "Política de privacidade da I&T Solutions.",
-};
+  path: "/politica-privacidade/",
+});
 
 const sections = [
   {
@@ -22,7 +24,7 @@ const sections = [
 
 export default function PrivacyPolicyPage() {
   return (
-    <main className="min-h-screen bg-slate-100">
+    <main className="min-h-screen bg-slate-100" id="main-content">
       <nav className="bg-slate-900 px-4 py-4 text-white">
         <div className="mx-auto max-w-5xl">
           <a className="font-bold hover:underline" href="/">

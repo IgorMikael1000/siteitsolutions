@@ -8,7 +8,7 @@
 
 .heroInner,
 .sectionInner {
-  width: min(100% - 2rem, 1200px);
+  width: min(100% - 2rem, var(--content-width));
   margin-inline: auto;
 }
 
@@ -166,14 +166,14 @@
 
 .sectionHeading p:not(.eyebrow) {
   margin: 0.65rem 0 0;
-  color: #64748b;
+  color: var(--text-muted);
   font-size: 1.08rem;
   line-height: 1.7;
 }
 
 .eyebrow {
   margin: 0 0 0.65rem;
-  color: #3b82f6;
+  color: var(--brand-blue);
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -190,14 +190,14 @@
 .processCard,
 .appCard {
   padding: 1.75rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 1rem;
+  border: 1px solid var(--brand-vitta-border);
+  border-radius: var(--card-radius);
   background: #fff;
-  box-shadow: 0 0.5rem 1.5rem rgb(15 23 42 / 5%);
+  box-shadow: var(--card-shadow);
 }
 
 .cardNumber {
-  color: #94a3b8;
+  color: var(--text-muted);
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -225,7 +225,7 @@
 .processCard p,
 .appCard > p {
   margin: 0;
-  color: #64748b;
+  color: var(--text-muted);
   line-height: 1.65;
 }
 
@@ -236,16 +236,16 @@
 .featuredProduct {
   display: grid;
   overflow: hidden;
-  border: 1px solid #eadff0;
+  border: 1px solid var(--brand-vitta-border);
   border-radius: 1.25rem;
-  background: #faf7fc;
+  background: var(--brand-vitta-surface);
   box-shadow: 0 0.75rem 2rem rgb(63 39 78 / 8%);
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .featuredImage {
   align-self: stretch;
-  background: #f3e8ff;
+  background: var(--brand-vitta-soft);
 }
 
 .featuredImage img {
@@ -261,7 +261,7 @@
 
 .productLabel {
   margin: 0 0 0.5rem;
-  color: #8050a7;
+  color: var(--brand-vitta);
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.07em;
@@ -277,18 +277,18 @@
 
 .featuredCopy > p:not(.productLabel) {
   margin: 0;
-  color: #64748b;
+  color: var(--text-muted);
   font-size: 1.05rem;
   line-height: 1.7;
 }
 
 .vittaButton {
-  background: #8050a7;
+  background: var(--brand-vitta);
   color: #fff;
 }
 
 .vittaButton:hover {
-  background: #683b8e;
+  background: var(--brand-vitta-hover);
   transform: translateY(-2px);
 }
 
@@ -419,7 +419,7 @@
 
 .platformCopy > p:last-child {
   margin: 0;
-  color: #64748b;
+  color: var(--text-muted);
   line-height: 1.75;
 }
 
@@ -437,13 +437,13 @@
 
 .platformCta p {
   margin: 0 auto 1.5rem;
-  color: #64748b;
+  color: var(--text-muted);
   line-height: 1.75;
 }
 
 .contact {
   padding-block: 4.5rem;
-  background: #0f172a;
+  background: var(--brand-navy);
   color: #fff;
 }
 

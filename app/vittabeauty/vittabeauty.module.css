@@ -4,12 +4,12 @@
 
 .hero,
 .how {
-  background: #faf7fc;
+  background: var(--brand-vitta-surface);
 }
 
 .heroInner,
 .content {
-  width: min(100% - 2rem, 1200px);
+  width: min(100% - 2rem, var(--content-width));
   margin-inline: auto;
 }
 
@@ -38,7 +38,7 @@
 
 .eyebrow {
   margin: 0 0 0.75rem;
-  color: #8050a7;
+  color: var(--brand-vitta);
   font-size: 0.85rem;
   font-weight: 750;
   letter-spacing: 0.08em;
@@ -54,7 +54,7 @@
   margin-top: 0.5rem;
   padding: 0.8rem 1.4rem;
   border-radius: 999px;
-  background: #8050a7;
+  background: var(--brand-vitta);
   box-shadow: 0 0.5rem 1.4rem rgb(63 39 78 / 15%);
   color: #fff;
   font-weight: 750;
@@ -64,20 +64,20 @@
 
 .primaryButton:hover {
   transform: translateY(-2px);
-  background: #683b8e;
+  background: var(--brand-vitta-hover);
 }
 
 .hero small {
   display: block;
   margin-top: 0.9rem;
-  color: #64748b;
+  color: var(--text-muted);
   line-height: 1.5;
 }
 
 .screenshot {
   overflow: hidden;
   margin: 0;
-  border: 1px solid #eadff0;
+  border: 1px solid var(--brand-vitta-border);
   border-radius: 1rem;
   background: #fff;
   box-shadow: 0 1rem 2.5rem rgb(63 39 78 / 12%);
@@ -127,7 +127,7 @@
 
 .sectionHeading > p:last-child {
   margin: 0;
-  color: #64748b;
+  color: var(--text-muted);
   font-size: 1.05rem;
   line-height: 1.7;
 }
@@ -141,10 +141,10 @@
 .featureCard,
 .stepCard {
   padding: 1.6rem;
-  border: 1px solid #eadff0;
-  border-radius: 1rem;
+  border: 1px solid var(--brand-vitta-border);
+  border-radius: var(--card-radius);
   background: #fff;
-  box-shadow: 0 0.5rem 1.5rem rgb(63 39 78 / 6%);
+  box-shadow: var(--card-shadow);
 }
 
 .featureIcon {
@@ -153,8 +153,8 @@
   height: 3.25rem;
   place-items: center;
   border-radius: 1rem;
-  background: #f3e8ff;
-  color: #8050a7;
+  background: var(--brand-vitta-soft);
+  color: var(--brand-vitta);
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -170,7 +170,7 @@
 .featureCard ul {
   margin: 0;
   padding-left: 1.1rem;
-  color: #64748b;
+  color: var(--text-muted);
   line-height: 1.6;
 }
 
@@ -185,7 +185,7 @@
 }
 
 .stepCard > span {
-  color: #9c74b8;
+  color: #70408c;
   font-size: 0.9rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -193,7 +193,7 @@
 
 .stepCard p {
   margin: 0;
-  color: #64748b;
+  color: var(--text-muted);
   line-height: 1.65;
 }
 
@@ -206,7 +206,7 @@
   max-width: 56rem;
   margin-inline: auto;
   padding: clamp(1.5rem, 5vw, 3.5rem);
-  border: 1px solid #eadff0;
+  border: 1px solid var(--brand-vitta-border);
   border-radius: 1.5rem;
   background: #fff;
   box-shadow: 0 1rem 2.5rem rgb(63 39 78 / 10%);

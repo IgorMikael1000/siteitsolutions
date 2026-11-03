@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./site-header.module.css";
 
 type SiteHeaderProps = {
@@ -24,6 +24,26 @@ const vittaLinks = [
 export function SiteHeader({ variant = "home" }: SiteHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const links = variant === "home" ? homeLinks : vittaLinks;
+
+  useEffect(() => {
+    if (!menuOpen) return;
+
+    function closeOnDesktop(event: MediaQueryListEvent) {
+      if (event.matches) setMenuOpen(false);
+    }
+
+    function closeOnEscape(event: KeyboardEvent) {
+      if (event.key === "Escape") setMenuOpen(false);
+    }
+
+    const desktopQuery = window.matchMedia("(min-width: 821px)");
+    desktopQuery.addEventListener("change", closeOnDesktop);
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      desktopQuery.removeEventListener("change", closeOnDesktop);
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [menuOpen]);
 
   return (
     <header className={styles.header}>

@@ -1,18 +1,21 @@
-import Image from "next/image";
 import type { Metadata } from "next";
+import { ResponsiveImage } from "@/components/responsive-image";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { createPageMetadata } from "@/lib/metadata";
 import styles from "./home.module.css";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "I&T Solutions — Sua Ideia, Nossa Tecnologia",
   description:
     "Criamos aplicativos e plataformas web para resolver desafios do dia a dia de pessoas e empresas.",
-};
+  path: "/",
+});
 
 const platforms = [
   {
-    image: "/img/dash_1.png",
+    image: "/media/dash_1",
+    imageHeight: 647,
     alt: "Painel demonstrativo de visão geral com indicadores, métricas por aplicativo e atividades recentes",
     eyebrow: "Monitoramento",
     title: "Exemplo de Monitoramento — Visão Geral",
@@ -20,7 +23,8 @@ const platforms = [
       "Um exemplo de painel central para acompanhar indicadores importantes da operação. Em vez de se adaptar a um software genérico, sua empresa pode definir quais informações precisa monitorar — como vendas, acessos, estoque ou produtividade — e como elas devem aparecer na tela inicial.",
   },
   {
-    image: "/img/dash_2.png",
+    image: "/media/dash_2",
+    imageHeight: 652,
     alt: "Painel demonstrativo de gestão de usuários com busca, filtros, status e ações",
     eyebrow: "Gestão operacional",
     title: "Exemplo de Gestão Operacional e de Usuários",
@@ -28,7 +32,8 @@ const platforms = [
       "Uma demonstração de gestão de usuários e clientes, com filtros, informações de cadastro e ações organizadas em uma única tela. Os módulos podem ser planejados de acordo com o fluxo de trabalho da sua equipe, priorizando as ferramentas necessárias para uma operação mais clara e ágil.",
   },
   {
-    image: "/img/dash_3.png",
+    image: "/media/dash_3",
+    imageHeight: 652,
     alt: "Painel demonstrativo de desempenho financeiro com faturamento bruto, taxas e repasse líquido estimado",
     eyebrow: "Inteligência financeira",
     title: "Exemplo de Inteligência Financeira e Regras de Negócio",
@@ -74,7 +79,7 @@ export default function HomePage() {
   return (
     <>
       <SiteHeader />
-      <main>
+      <main id="main-content">
         <section className={styles.hero} id="inicio">
           <div className={styles.heroInner}>
             <div className={styles.heroCopy}>
@@ -107,17 +112,18 @@ export default function HomePage() {
             <figure className={styles.heroPreview}>
               <a
                 aria-label="Ampliar prévia da tela inicial do Vitta Beauty"
-                href="/img/vittabeauty/slide_1.png"
+                href="/media/vittabeauty/slide_1-1440.webp"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <Image
+                <ResponsiveImage
                   alt="Prévia do painel inicial do Vitta Beauty com agenda, solicitações e indicadores do negócio"
                   className={styles.heroImage}
                   height={870}
+                  mobileSrc="/media/vittabeauty/slide_1-768.webp"
                   priority
-                  src="/img/vittabeauty/slide_1.png"
-                  width={1917}
+                  src="/media/vittabeauty/slide_1"
+                  width={1440}
                 />
               </a>
               <figcaption>
@@ -177,11 +183,12 @@ export default function HomePage() {
                 className={styles.featuredImage}
                 href="/vittabeauty/"
               >
-                <Image
+                <ResponsiveImage
                   alt="Painel inicial do Vitta Beauty com resumo da agenda e indicadores"
-                  height={870}
-                  src="/img/vittabeauty/slide_1.png"
-                  width={1917}
+                  height={653}
+                  mobileSrc="/media/vittabeauty/slide_1-768.webp"
+                  src="/media/vittabeauty/slide_1"
+                  width={1440}
                 />
               </a>
               <div className={styles.featuredCopy}>
@@ -209,10 +216,11 @@ export default function HomePage() {
             <div className={styles.appGrid}>
               <article className={styles.appCard}>
                 <div className={styles.appTitle}>
-                  <Image
+                  <ResponsiveImage
                     alt="Ícone do Roterizador PRO"
                     height={80}
-                    src="/img/icon_roterizadorpro.jpeg"
+                    mobileSrc="/media/icon_roterizadorpro-768.webp"
+                    src="/media/icon_roterizadorpro"
                     width={80}
                   />
                   <h3>Roterizador PRO</h3>
@@ -237,10 +245,11 @@ export default function HomePage() {
               </article>
               <article className={styles.appCard}>
                 <div className={styles.appTitle}>
-                  <Image
+                  <ResponsiveImage
                     alt="Ícone do AgendaCare"
                     height={80}
-                    src="/img/icon_agendacare.jpeg"
+                    mobileSrc="/media/icon_agendacare-768.webp"
+                    src="/media/icon_agendacare"
                     width={80}
                   />
                   <h3>AgendaCare</h3>
@@ -295,13 +304,18 @@ export default function HomePage() {
                   <figure
                     className={`${styles.platformPreview} ${index % 2 ? styles.reverse : ""}`}
                   >
-                    <a href={platform.image} target="_blank" rel="noreferrer">
-                      <Image
+                    <a
+                      href={`${platform.image}-1440.webp`}
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      <ResponsiveImage
                         alt={platform.alt}
-                        height={870}
+                        height={platform.imageHeight}
                         loading="lazy"
+                        mobileSrc={`${platform.image}-768.webp`}
                         src={platform.image}
-                        width={1917}
+                        width={1440}
                       />
                     </a>
                     <figcaption>

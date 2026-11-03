@@ -1,15 +1,17 @@
-import Image from "next/image";
 import type { Metadata } from "next";
+import { ResponsiveImage } from "@/components/responsive-image";
 import { ScreenshotCarousel } from "@/components/screenshot-carousel";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
+import { createPageMetadata } from "@/lib/metadata";
 import styles from "./vittabeauty.module.css";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = createPageMetadata({
   title: "Vitta Beauty — Mais organização para sua rotina de beleza",
   description:
     "Organize sua rotina de beleza com o Vitta Beauty: agenda online, clientes, serviços, WhatsApp e controle financeiro em um só lugar.",
-};
+  path: "/vittabeauty/",
+});
 
 const features = [
   {
@@ -74,7 +76,7 @@ export default function VittaBeautyPage() {
   return (
     <>
       <SiteHeader variant="vitta" />
-      <main className={styles.page}>
+      <main className={styles.page} id="main-content">
         <section className={styles.hero} id="inicio">
           <div className={styles.heroInner}>
             <div>
@@ -97,16 +99,17 @@ export default function VittaBeautyPage() {
             <figure className={styles.screenshot}>
               <a
                 aria-label="Abrir tela inicial do Vitta Beauty em tamanho ampliado"
-                href="/img/vittabeauty/slide_1.png"
+                href="/media/vittabeauty/slide_1-1440.webp"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                <Image
+                <ResponsiveImage
                   alt="Tela inicial do Vitta Beauty com resumo da agenda e atalhos para clientes, serviços e organização"
-                  height={870}
+                  height={653}
+                  mobileSrc="/media/vittabeauty/slide_1-768.webp"
                   priority
-                  src="/img/vittabeauty/slide_1.png"
-                  width={1917}
+                  src="/media/vittabeauty/slide_1"
+                  width={1440}
                 />
               </a>
               <figcaption>Uma visão prática da rotina profissional.</figcaption>

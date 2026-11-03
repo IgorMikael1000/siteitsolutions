@@ -2,6 +2,18 @@
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
 
 :root {
+  --brand-navy: #0f172a;
+  --brand-vitta: #8050a7;
+  --brand-vitta-hover: #683b8e;
+  --brand-vitta-soft: #f3e8ff;
+  --brand-vitta-surface: #faf7fc;
+  --brand-vitta-border: #eadff0;
+  --brand-blue: #1d4ed8;
+  --text-muted: #64748b;
+  --content-width: 75rem;
+  --card-radius: 1rem;
+  --pill-radius: 999px;
+  --card-shadow: 0 0.5rem 1.5rem rgb(15 23 42 / 6%);
   color-scheme: light;
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   font-synthesis: none;
@@ -18,11 +30,16 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
 body {
   margin: 0;
   min-width: 320px;
+}
+
+picture {
+  display: block;
 }
 
 a {
@@ -34,7 +51,37 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 3px;
+}
+
+.skipLink {
+  position: fixed;
+  z-index: 100;
+  top: 0.75rem;
+  left: 0.75rem;
+  transform: translateY(calc(-100% - 1rem));
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1.5rem rgb(15 23 42 / 20%);
+  color: #0f172a;
+  font-weight: 700;
+}
+
+.skipLink:focus {
+  transform: translateY(0);
+}
+
 ::selection {
   color: #fff;
   background: #694487;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
