@@ -1,0 +1,256 @@
+.page {
+  color: #30243c;
+}
+
+.hero,
+.how {
+  background: #faf7fc;
+}
+
+.heroInner,
+.content {
+  width: min(100% - 2rem, 1200px);
+  margin-inline: auto;
+}
+
+.heroInner {
+  display: grid;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  padding-block: clamp(4rem, 8vw, 7rem);
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+}
+
+.hero h1 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.hero p:not(.eyebrow) {
+  margin: 0 0 1rem;
+  color: #675b70;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  color: #8050a7;
+  font-size: 0.85rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.primaryButton {
+  display: inline-flex;
+  min-height: 3.25rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  background: #8050a7;
+  box-shadow: 0 0.5rem 1.4rem rgb(63 39 78 / 15%);
+  color: #fff;
+  font-weight: 750;
+  text-decoration: none;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.primaryButton:hover {
+  transform: translateY(-2px);
+  background: #683b8e;
+}
+
+.hero small {
+  display: block;
+  margin-top: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+.screenshot {
+  overflow: hidden;
+  margin: 0;
+  border: 1px solid #eadff0;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 1rem 2.5rem rgb(63 39 78 / 12%);
+}
+
+.screenshot a {
+  display: block;
+}
+
+.screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.screenshot figcaption {
+  padding: 0.75rem 1rem;
+  color: #675b70;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.section {
+  padding-block: clamp(4rem, 8vw, 6rem);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.sectionHeading {
+  max-width: 56rem;
+  align-self: center;
+  text-align: center;
+}
+
+.sectionHeading h2,
+.cta h2 {
+  margin: 0 0 0.9rem;
+  font-size: clamp(1.9rem, 4vw, 2.7rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+}
+
+.sectionHeading > p:last-child {
+  margin: 0;
+  color: #64748b;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.featureGrid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.featureCard,
+.stepCard {
+  padding: 1.6rem;
+  border: 1px solid #eadff0;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1.5rem rgb(63 39 78 / 6%);
+}
+
+.featureIcon {
+  display: grid;
+  width: 3.25rem;
+  height: 3.25rem;
+  place-items: center;
+  border-radius: 1rem;
+  background: #f3e8ff;
+  color: #8050a7;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.featureCard h3,
+.stepCard h3 {
+  margin: 1.1rem 0 0.8rem;
+  font-size: 1.2rem;
+  font-weight: 750;
+  line-height: 1.3;
+}
+
+.featureCard ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.featureCard li + li {
+  margin-top: 0.55rem;
+}
+
+.stepGrid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.stepCard > span {
+  color: #9c74b8;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.stepCard p {
+  margin: 0;
+  color: #64748b;
+  line-height: 1.65;
+}
+
+.ctaSection {
+  padding: clamp(3rem, 7vw, 5.5rem) 1rem;
+  background: linear-gradient(135deg, #f8f1fb 0%, #efe3f6 100%);
+}
+
+.cta {
+  max-width: 56rem;
+  margin-inline: auto;
+  padding: clamp(1.5rem, 5vw, 3.5rem);
+  border: 1px solid #eadff0;
+  border-radius: 1.5rem;
+  background: #fff;
+  box-shadow: 0 1rem 2.5rem rgb(63 39 78 / 10%);
+  text-align: center;
+}
+
+.cta > p:not(.eyebrow) {
+  margin: 0 auto 1.3rem;
+  color: #675b70;
+  font-size: 1.08rem;
+  line-height: 1.75;
+}
+
+@media (max-width: 980px) {
+  .heroInner {
+    grid-template-columns: 1fr;
+  }
+
+  .heroInner > div:first-child {
+    max-width: 48rem;
+  }
+
+  .featureGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .featureGrid,
+  .stepGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .primaryButton {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .primaryButton {
+    transition: none;
+  }
+
+  .primaryButton:hover {
+    transform: none;
+  }
+}
